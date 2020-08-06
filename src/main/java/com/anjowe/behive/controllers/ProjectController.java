@@ -3,7 +3,7 @@ package com.anjowe.behive.controllers;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -23,7 +23,7 @@ public class ProjectController {
 		this.projectService = projectService;
 	}
 
-	@GetMapping("/project/recommendations")
+	@PostMapping("/project/recommendations")
 	public Mono<List<Candidate>> getCandidates(@RequestBody Project project) {
 		return projectService.recommendUsers(project);
 	}

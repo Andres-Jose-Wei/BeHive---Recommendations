@@ -1,0 +1,2 @@
+server:
+  port: ${custome_port:8096}

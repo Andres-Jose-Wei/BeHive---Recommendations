@@ -4,9 +4,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
-
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
@@ -18,13 +15,11 @@ import lombok.ToString;
 @AllArgsConstructor
 @ToString
 @EqualsAndHashCode
-@Document(collection = "User")
 public class User {
 
 	/**
 	 * A user’s id
 	 */
-	@Id
 	private String id;
 
 	/**
@@ -117,7 +112,7 @@ public class User {
 	 * Whether or not a user is already working on a project
 	 */
 	private boolean isAvailable;
-	
+
 	/**
 	 * Whether or not a user is the Admin of the application
 	 */

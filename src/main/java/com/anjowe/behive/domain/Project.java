@@ -3,9 +3,6 @@ package com.anjowe.behive.domain;
 import java.util.ArrayList;
 import java.util.Map;
 
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
-
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
@@ -19,10 +16,8 @@ import lombok.ToString;
 @NoArgsConstructor
 @EqualsAndHashCode
 @ToString
-@Document(collection = "Projects")
 public class Project {
 
-	@Id
 	private String name;
 	private String owner;
 	private String status;

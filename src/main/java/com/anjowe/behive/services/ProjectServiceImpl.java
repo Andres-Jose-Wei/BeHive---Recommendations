@@ -47,9 +47,10 @@ public class ProjectServiceImpl implements ProjectService {
 		});
 	}
 
-	public static double jaccardSimilarity(Set<String> a, Set<String> b) {
-		a.retainAll(b);
-		return (a.size() * 1d) / a.size();
+	public double jaccardSimilarity(Set<String> required, Set<String> candidateSkills) {
+		int reqSize = required.size();
+		required.retainAll(candidateSkills);
+		return (required.size() * 1d) / reqSize;
 	}
 
 }

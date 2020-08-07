@@ -42,7 +42,7 @@ public class ProjectServiceImpl implements ProjectService {
 					c.setPosition(project.getPositions().get(pId).getName());
 					c.setUsername(users.get(i).getUsername());
 					c.setCompatibility(jaccardSimilarity(project.getPositions().get(pId).getSkills(),
-							users.get(i).getSkillStats().keySet()));
+							users.get(i).getSkillStats().keySet()) * 100);
 					recomendedUsers.add(c);
 				}
 			}

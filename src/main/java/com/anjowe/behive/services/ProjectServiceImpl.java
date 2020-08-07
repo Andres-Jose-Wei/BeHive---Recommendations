@@ -51,7 +51,7 @@ public class ProjectServiceImpl implements ProjectService {
 	}
 
 	public double jaccardSimilarity(Set<String> required, Set<String> candidateSkills) {
-		int reqSize = required.size();
+		double reqSize = required.size() * 1d;
 		required.retainAll(candidateSkills);
 		return (required.size() * 1d) / reqSize;
 	}

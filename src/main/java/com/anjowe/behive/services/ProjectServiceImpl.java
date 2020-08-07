@@ -34,6 +34,9 @@ public class ProjectServiceImpl implements ProjectService {
 			List<Candidate> recomendedUsers = new ArrayList<Candidate>();
 			for (int pId = 0; pId < project.getPositions().size(); pId++) {
 				for (int i = 0; i < users.size(); i++) {
+					if (users.get(i).getUsername().equals(project.getOwner())) {
+						continue;
+					}
 					Candidate c = new Candidate();
 					c.setName(users.get(i).getFirstName() + " " + users.get(i).getLastName());
 					c.setPosition(project.getPositions().get(pId).getName());
